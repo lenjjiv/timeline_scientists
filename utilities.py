@@ -31,7 +31,7 @@ def calculate_plot_dimensions(events: List[TimelineEvent]) -> Dict[str, int]:
     
     # Calculate dimensions
     height = len(events) * 0.5  # 0.5 units per event
-    width = (max_year - min_year) * 0.15  # Scale factor for width
+    width = (max_year - min_year) * 0.05  # Scale factor for width
     
     # Adjust width for text labels
     text_space = max_name_length * 0.1  # Space for text labels
@@ -97,4 +97,4 @@ def create_timeline_plot(events: List[TimelineEvent]) -> plt.Figure:
 
 def save_timeline_plot(fig: plt.Figure, output_path: str, dpi: int = 300) -> None:
     """Save plot to file."""
-    fig.savefig(output_path, dpi=dpi, bbox_inches='tight')from operator import itemgetter
+    fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
